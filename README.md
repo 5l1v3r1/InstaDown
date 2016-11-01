@@ -1,27 +1,22 @@
-# InstaDown
-
-
-----------
-
+# InstaDown v2
 
 *Commandline Instagram Downloader written by Python using Instagram API*
 
 ---
 **DISCLAIMER:**
 
-This code is posted for informational purposes only. Use of Instagram is governed by the company's Terms of Use (http://instagram.com/legal/terms/). Any user content posted to Instagram is governed by the Privacy Policy (http://instagram.com/legal/privacy/). 
+This code is shared for informational purposes only. Use of Instagram is governed by the company's Terms of Use (http://instagram.com/legal/terms/). Any user content posted to Instagram is governed by the Privacy Policy (http://instagram.com/legal/privacy/). 
 
 ---
 
-###Usage:
-```
-main.py [-h] -u username -l /path/to/save/photos
-```
-**Warnings:** 
- 
+###Read before use:
+You should have developer token id for Instagram. If you're using your own application, you can experience some problems caused by Instagram's new api restrictions. I won't support that situations.
+You can use [here](http://services.chrisriversdesign.com/instagram-token/) for taking unproblematic one.
 
- - If download directory doesn't exist before run this program create it.
- - Don't tested on Windows and Mac.
+###Usage
+```
+usage: main.py [-h] -u [username] [-l [path]] {[--list] [-o [file]]}
+```
 
 ```
 ***                   *             *****
@@ -32,7 +27,7 @@ main.py [-h] -u username -l /path/to/save/photos
  *   *    *   **      *      *****   *   *  *    *  *  *  *  *    *
  *   *    *     **    *     *    *   *   *  *    *  *  *  *  *    *
  *   *    *  *    *   *  *  *   **   *   *  *    *  *  *  *  *    *
-***  *    *   ****     **    *** *  *****    ****    ** **   *    *
+***  *    *   ****     **    *** *  *****    ****    ** **   *    * v2
 
 
 [0.00%] Downloading: #1
@@ -52,3 +47,19 @@ main.py [-h] -u username -l /path/to/save/photos
 [100.00%] Downloading: #15
 
 ```
+
+###Changelog
+**02.11.2016:**
+- New feature: Listing photo URLs. You can print or save on file it. 
+- More modular functions in `instadown.py`. You can use it as library in your projects. 
+- Better error and exception handling. 
+- Better help menu with colors.
+- Some bugfix and performance improvements. (Approx. download 100 photos/min. in my tests.)
+
+**Warnings** 
+ 
+ - If download directory doesn't exist before run, it creates one.
+ - If url list file doesn't exist before run, it creates one.
+ - I couldn't test it on Windows and Mac but it must work.
+
+
